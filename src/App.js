@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import { Link, Route } from "react-router-dom";
 
 import Counter from "./components/Counter";
-import CounterDecrement from "./components/CounterDecrement";
-
+import GamesPage from "./components/game";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavigationBar from "./components/NavigationBar";
+import CounterPage from "./components/Counter/CounterPage";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Link to='/counter'>Лічильник ++</Link>
-        <br/>
-        <Link to='/counterdec'>Лічильник --</Link>
-
+      <div className="container">
+        <NavigationBar />
+        <Route exact path='/counterpage' component={CounterPage} />
         <Route exact path='/counter' component={Counter} />
-        <Route exact path='/counterdec' component={CounterDecrement} />
+        <Route exact path='/game' component={GamesPage} />
       </div>
     );
   }
