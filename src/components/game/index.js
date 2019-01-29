@@ -19,7 +19,6 @@ class GamePage extends Component {
                     GameList
                 </h1>
                 <GameList games={games}/>
-
             </div>
         )
     }

@@ -11,7 +11,7 @@ export function setGames(games){
 
 export function fetchGames(){
     return dispath=>{
-        fetch('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
+        fetch('https://localhost:44349/api/game')
         .then(res=> res.json())
         .then(data => dispath(setGames(data)))
     }
